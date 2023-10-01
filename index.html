@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="localPeerId" id="localPeerId"><br><br>
+    <input type="text" name="remotePeerId" id="remotePeerId">
+    <button id="btn-call">Call</button>
+
+    <video id="localVideo" muted></video>
+
+    <video id="remoteVideo" ></video>
+
+    <button id="end-call">Finalizar llamada</button>
+
+    <button id="toggle-audio">Toggle Micrófono</button>
+
+    <button id="toggle-video">Alternar Cámara</button>
+
+
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+<!-- ________________ VIDEO DE DONDE ESTRAJE LA INFORMACION _________ -->
+<!-- https://www.youtube.com/watch?v=y0srtrtK1Q0 -->
+
+<!-- ________________ PAGINA OFICIAL DE Peerjs DE DONDE ESTRAJE LA INFORMACION _________ -->
+<!-- https://peerjs.com/ -->
