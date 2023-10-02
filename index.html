@@ -1,25 +1,54 @@
+<!-- Desarrollado por: David Sanchez -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <!-- PARA ICONOS -->
+     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
 <body>
+    
+    <div class="contenedor-principal">
+        <div class="contenedor-videoChat">
+
+            <!-- VIDEO EMISOR -->
+            <video id="localVideo" class="localVideo" muted ></video>
+    
+            <!-- VIDEO RECEPTOR -->
+            <video id="remoteVideo"></video>
+
+        </div>
+        <!-- CONTROLES -->
+        <div class="contenedor-controles">
+
+            <button class="botones-controles" id="toggle-audio">
+                <i id='microfono' class="fas fa-microphone-alt"></i>
+                <!-- <i class="fas fa-microphone-slash"></i> -->
+            </button>
+
+            <button class="botones-controles" id="toggle-video">
+                <i class="fas fa-video"></i>
+                <!-- <i class="fas fa-video-slash"></i> -->
+            </button>
+
+            <button class="botones-controles colgar" id="end-call">
+                <i class="fas fa-phone-slash"></i>
+            </button>
+        </div>
+    </div>
+    
+
     <input type="text" name="localPeerId" id="localPeerId"><br><br>
     <input type="text" name="remotePeerId" id="remotePeerId">
     <button id="btn-call">Call</button>
 
-    <video id="localVideo" muted></video>
-
-    <video id="remoteVideo" ></video>
-
-    <button id="end-call">Finalizar llamada</button>
-
-    <button id="toggle-audio">Toggle Micrófono</button>
-
-    <button id="toggle-video">Alternar Cámara</button>
+    <button id="fullscreen-button">Pantalla Completa</button> 
 
 
     <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>

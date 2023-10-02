@@ -1,3 +1,4 @@
+//  Desarrollado por: David Sanchez 
 var peer = new Peer();
 
 let localStream;
@@ -69,10 +70,12 @@ toggleAudioButton.addEventListener('click', () => {
             for (const track of audioTracks) {
                 track.enabled = !isAudioEnabled;
             }
+           
             isAudioEnabled = !isAudioEnabled;
             toggleAudioButton.textContent = isAudioEnabled ? 'Desactivar Micrófono' : 'Activar Micrófono';
         }
     }
+   
 });
 
 
@@ -95,5 +98,23 @@ toggleVideoButton.addEventListener('click', () => {
             isVideoEnabled = !isVideoEnabled;
             toggleVideoButton.textContent = isVideoEnabled ? 'Desactivar Cámara' : 'Activar Cámara';
         }
+    }
+});
+
+
+
+// Pantalla completa
+
+const videoElements = document.getElementById('localVideo');
+const fullscreenButton = document.getElementById('fullscreen-button');
+
+fullscreenButton.addEventListener('click', () => {
+    alert()
+    if (!document.fullscreenElement) {
+        videoElements.requestFullscreen().catch(error => {
+            console.error('Error al entrar en pantalla completa:', error);
+        });
+    } else {
+        document.exitFullscreen();
     }
 });
