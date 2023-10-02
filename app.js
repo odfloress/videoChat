@@ -1,4 +1,4 @@
-//  Desarrollado por: David Sanchez 
+//  Desarrollado por: David Sanchez  
 var peer = new Peer();
 
 let localStream;
